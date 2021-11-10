@@ -1,0 +1,19 @@
+{
+  "name": "p2tr",
+  "version": "1.0.0",
+  "description": "",
+  "main": "p2tr.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bech32": "^2.0.0",
+    "bip-schnorr": "^0.6.4",
+    "bip39": "^3.0.4",
+    "bitcoinjs-lib": "^5.2.0",
+    "ecurve": "^1.0.6"
+  }
+}

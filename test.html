@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="buidl.js"></script>
+<script src="taproot.js"></script>
+</head>
+<body>
+<button onclick="return tapit();">Do the thing</button><br>
+<div id="output"></div>
+<script>
+
+function tapit(){
+    document.getElementById("output").innerHTML = "";
+	let ax = buidl.getNewAddress();
+	let keyPair = buidl.bitcoin.ECPair.fromWIF(ax.pk);
+	let tapAddr = tap.getP2TRAddress(keyPair);
+	document.getElementById("output").innerHTML = tapAddr+"<br>"+ax.pk;
+}
+</script>
+</body>
+</html>

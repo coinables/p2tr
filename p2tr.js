@@ -10,7 +10,7 @@ function getP2TRAddress(keyPair, network) {
   const taprootPubkey = schnorr.taproot.taprootConstruct(pubKey)
   const words = bech32.toWords(taprootPubkey)
   words.unshift(1)
-  return bech32m.encode("bc",words)
+  return bech32m.encode('bc',words)
 }
 
 module.exports = {

@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-<script src="buidl.js"></script>
-<script src="taproot.js"></script>
+<script src="js/buidl.js"></script>
+<script src="js/taproot.js"></script>
 </head>
 <body>
 <button onclick="return tapit();">Do the thing</button><br>
@@ -11,10 +11,11 @@
 
 function tapit(){
     document.getElementById("output").innerHTML = "";
-	let ax = buidl.getNewAddress();
-	let keyPair = buidl.bitcoin.ECPair.fromWIF(ax.pk);
+	//let ax = buidl.getNewAddress();
+	//test with known private key (0x0000...00001)
+	let keyPair = buidl.bitcoin.ECPair.fromWIF("KwDiBf89QgGbjEhKnhXJuH7LrciVrZi3qYjgd9M7rFU73sVHnoWn");
 	let tapAddr = tap.getP2TRAddress(keyPair);
-	document.getElementById("output").innerHTML = tapAddr+"<br>"+ax.pk;
+	document.getElementById("output").innerHTML = tapAddr+"<br>";
 }
 </script>
 </body>
